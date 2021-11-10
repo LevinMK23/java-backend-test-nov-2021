@@ -15,7 +15,6 @@
         <surefire.version>2.22.0</surefire.version>
     </properties>
 
-
     <build>
         <plugins>
             <plugin>
@@ -56,6 +55,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
 
     </dependencies>
 
