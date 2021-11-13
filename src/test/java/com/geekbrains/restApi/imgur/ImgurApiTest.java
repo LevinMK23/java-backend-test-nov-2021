@@ -1,6 +1,10 @@
 package com.geekbrains.restApi.imgur;
 
 import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
@@ -47,19 +51,28 @@ public class ImgurApiTest {
     void testUpdateImageInfo() {
         String imageHash = "JM5ALPM";
         String url = "image/" + imageHash;
+
+        RequestSpecification requestSpecification = new RequestSpecBuilder()
+                .addFormParam("title", "Omg Braxton")
+                .addFormParam("description", "Just a simple mem")
+                .build();
+
+        ResponseSpecification responseSpecification = new ResponseSpecBuilder()
+                .expectBody("success", is(true))
+                .expectBody("data", is(true))
+                .expectStatusCode(200)
+                .build();
+
         given().when()
                 .auth()
                 .oauth2(ImgurApiParams.TOKEN)
                 .log()
                 .all()
-                .formParam("title", "Omg Braxton")
-                .formParam("description", "Just a simple mem")
+                .spec(requestSpecification)
                 .expect()
                 .log()
                 .all()
-                .statusCode(is(200))
-                .body("success", is(true))
-                .body("data", is(true))
+                .spec(responseSpecification)
                 .when()
                 .post(url);
 

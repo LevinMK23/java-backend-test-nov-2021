@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd29689e-617f-4a40-9880-3a9eb125fa42" name="Default Changelist" comment="" />
+    <list default="true" id="cd29689e-617f-4a40-9880-3a9eb125fa42" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/lesson4/LombokUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/lesson4/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/lesson4/Specs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/lesson4/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/lesson4/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/lesson4/MiniMarketApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/restApi/imgur/ImgurApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/restApi/imgur/ImgurApiTest.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-core/src/java/ru/yandex/vendor/modelbids/promotion/ModelForecast.java" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-core/src/java/ru/yandex/vendor/modelbids/promotion/ModelForecast.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-core/src/java/ru/yandex/vendor/modelbids/promotion/ModelsPromotionService.java" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-core/src/java/ru/yandex/vendor/modelbids/promotion/ModelsPromotionService.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/aop/ContainerModelAspect.java" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/aop/ContainerModelAspect.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/config/ControllersConfig.java" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/config/ControllersConfig.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/controllers/MarketplaceModelsPromotionController.java" beforeDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/model/modelbids/promotion/ModelForecastView.java" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/model/modelbids/promotion/ModelForecastView.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/model/modelbids/promotion/ModelGroupSummaryInfoView.java" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/vendors/cs-billing/vendor-partner/src/java/ru/yandex/market/vendor/model/modelbids/promotion/ModelGroupSummaryInfoView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +56,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -48,45 +72,29 @@
       <recent name="com.geekbrains.lesson3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ImgurApiTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MiniMarketApiTest">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.lesson4.Test" />
+      <module name="java-backend-test-nov-2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geekbrains.lesson4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArithmeticUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-backend-test-nov-2021" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.lesson3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.lesson3" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.lesson3.ArithmeticUtilsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArithmeticUtilsTest.sum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-backend-test-nov-2021" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.lesson3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.lesson3" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.lesson3.ArithmeticUtilsTest" />
-      <option name="METHOD_NAME" value="sum(int,int,int)" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,22 +110,6 @@
       <option name="PACKAGE_NAME" value="com.geekbrains.restApi.imgur" />
       <option name="MAIN_CLASS_NAME" value="com.geekbrains.restApi.imgur.ImgurApiTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImgurApiTest.testAccountBase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-backend-test-nov-2021" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.restApi.imgur.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.restApi.imgur" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.restApi.imgur.ImgurApiTest" />
-      <option name="METHOD_NAME" value="testAccountBase" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,13 +130,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MiniMarketApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-backend-test-nov-2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geekbrains.lesson4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.geekbrains.lesson4" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.lesson4.MiniMarketApiTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MiniMarketApiTest.testCreateNewProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-backend-test-nov-2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geekbrains.lesson4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.geekbrains.lesson4" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.lesson4.MiniMarketApiTest" />
+      <option name="METHOD_NAME" value="testCreateNewProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ImgurApiTest" />
+        <item itemvalue="JUnit.MiniMarketApiTest" />
+        <item itemvalue="JUnit.MiniMarketApiTest.testCreateNewProduct" />
         <item itemvalue="JUnit.ImgurApiTest.testUpdateImageInfo" />
-        <item itemvalue="JUnit.ImgurApiTest.testAccountBase" />
-        <item itemvalue="JUnit.ArithmeticUtilsTest.sum" />
-        <item itemvalue="JUnit.ArithmeticUtilsTest" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="JUnit.ImgurApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -159,11 +182,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635959733198</updated>
-      <workItem from="1635959734460" duration="4817000" />
+      <workItem from="1635959734460" duration="5110000" />
+      <workItem from="1636824216489" duration="4188000" />
     </task>
+    <task id="LOCAL-00001" summary="Lesson 3. RestAssured tests for Imgur Api">
+      <created>1635964598627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635964598627</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lesson 3. RestAssured tests for Imgur Api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 3. RestAssured tests for Imgur Api" />
   </component>
 </project>
