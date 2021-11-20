@@ -5,8 +5,10 @@ import java.util.List;
 import com.geekbrains.retrofit.model.Product;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface MiniMarketApi {
@@ -19,5 +21,11 @@ public interface MiniMarketApi {
 
     @POST("api/v1/products")
     Call<Product> createProduct(@Body Product product);
+
+    @DELETE("api/v1/products/{id}")
+    Call<Object> deleteProduct(@Path("id") Long id);
+
+    @PUT("api/v1/products")
+    Call<Product> updateProduct(@Body Product product);
     
 }

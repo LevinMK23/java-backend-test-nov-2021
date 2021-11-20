@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd29689e-617f-4a40-9880-3a9eb125fa42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApiService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/help.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/miniMarketApiTest/MiniMarketApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/mybatis/MyBatisDbService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/mybatis/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/mybatis/hw.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/geekbrains/mybatis/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/com/geekbrains/miniMarketApiTest/testGetProducts/expected.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/restApi/imgur/ImgurApiParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/restApi/imgur/ImgurApiParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/miniMarketApiTest/MiniMarketApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/miniMarketApiTest/MiniMarketApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +48,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/geekbrains/mybatis" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,6 +64,10 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/geekbrains/mybatis" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -65,13 +75,13 @@
       <recent name="com.geekbrains.lesson3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MiniMarketApiTest.testGetProductById">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.retrofit.Main" />
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.mybatis.Test" />
       <module name="java-backend-test-nov-2021" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.retrofit.*" />
+          <option name="PATTERN" value="com.geekbrains.mybatis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,44 +89,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImgurApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-backend-test-nov-2021" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.restApi.imgur.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.restApi.imgur" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.restApi.imgur.ImgurApiTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImgurApiTest.testAccountBase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-backend-test-nov-2021" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.restApi.imgur.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.restApi.imgur" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.restApi.imgur.ImgurApiTest" />
-      <option name="METHOD_NAME" value="testAccountBase" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MiniMarketApiTest.testGetProductById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MiniMarketApiTest.testCreateNewProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-backend-test-nov-2021" />
       <extension name="coverage">
         <pattern>
@@ -146,7 +127,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.geekbrains.miniMarketApiTest" />
       <option name="MAIN_CLASS_NAME" value="com.geekbrains.miniMarketApiTest.MiniMarketApiTest" />
-      <option name="METHOD_NAME" value="testGetProductById" />
+      <option name="METHOD_NAME" value="testCreateNewProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MiniMarketApiTest.testDeleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-backend-test-nov-2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geekbrains.miniMarketApiTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.geekbrains.miniMarketApiTest" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.miniMarketApiTest.MiniMarketApiTest" />
+      <option name="METHOD_NAME" value="testDeleteById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MiniMarketApiTest.testGetProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-backend-test-nov-2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geekbrains.miniMarketApiTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.geekbrains.miniMarketApiTest" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.miniMarketApiTest.MiniMarketApiTest" />
+      <option name="METHOD_NAME" value="testGetProducts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MiniMarketApiTest.testGetProductById" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.MiniMarketApiTest (1)" />
-        <item itemvalue="JUnit.ImgurApiTest" />
-        <item itemvalue="JUnit.ImgurApiTest.testAccountBase" />
+        <item itemvalue="JUnit.MiniMarketApiTest.testDeleteById" />
+        <item itemvalue="JUnit.MiniMarketApiTest.testCreateNewProduct" />
+        <item itemvalue="JUnit.MiniMarketApiTest.testGetProducts" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +188,8 @@
       <updated>1635959733198</updated>
       <workItem from="1635959734460" duration="5110000" />
       <workItem from="1636824216489" duration="4403000" />
-      <workItem from="1637169133772" duration="5201000" />
+      <workItem from="1637169133772" duration="5630000" />
+      <workItem from="1637429387990" duration="5317000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 3. RestAssured tests for Imgur Api">
       <created>1635964598627</created>
@@ -191,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636828518033</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lesson 5. Retrofit">
+      <created>1637174374979</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637174374979</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +221,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesson 3. RestAssured tests for Imgur Api" />
     <MESSAGE value="Lesson 4. RestAssured tests for Imgur Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 4. RestAssured tests for Imgur Api" />
+    <MESSAGE value="Lesson 5. Retrofit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5. Retrofit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/geekbrains/miniMarketApiTest/MiniMarketApiTest.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
