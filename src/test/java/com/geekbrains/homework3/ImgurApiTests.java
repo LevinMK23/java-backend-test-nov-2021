@@ -68,7 +68,6 @@ public class ImgurApiTests {
                 .body("data.description", is(imgDescription))
                 .when()
                 .post(url);
-
     }
 
     @DisplayName("Тест загрузки гифки по ссылке на гифку")

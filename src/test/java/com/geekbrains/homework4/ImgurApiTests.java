@@ -95,15 +95,6 @@ public class ImgurApiTests {
         String gifDescription = "we are smart";
         String gifName = "because-were-smart-were-smart.gif";
 
-        RequestSpecification requestSpecPostGifInfo = new RequestSpecBuilder()
-                .addFormParam("image", gifUrl)
-                .addFormParam("album", albumHash)
-                .addFormParam("type", "url")
-                .addFormParam("name", gifName)
-                .addFormParam("title", gifTitle)
-                .addFormParam("description", gifDescription)
-                .build();
-
         given().when()
                 .spec(authSpec)
                 .formParam("image", gifUrl)
