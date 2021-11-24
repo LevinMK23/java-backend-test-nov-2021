@@ -1,6 +1,7 @@
 package com.geekbrains.lesson4;
 
 import io.restassured.http.ContentType;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ public class MiniMarketApiTest {
     private static Long id;
 
     @Test
+    @Disabled
     @Order(1)
     void testCreateNewProduct() {
         Product product = given().when()
@@ -37,6 +39,7 @@ public class MiniMarketApiTest {
     }
 
     @Test
+    @Disabled
     @Order(2)
     void testDeleteById() {
         given().when()

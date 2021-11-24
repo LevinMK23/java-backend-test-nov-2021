@@ -6,6 +6,7 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -47,6 +48,7 @@ public class ImgurApiTest {
 
     @DisplayName("Тест обновления информации о картинке")
     @Test
+    @Disabled
     @Order(2)
     void testUpdateImageInfo() {
         String imageHash = "JM5ALPM";
