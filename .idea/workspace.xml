@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd29689e-617f-4a40-9880-3a9eb125fa42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/mybatis/MyBatisDbService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/mybatis/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/mybatis/hw.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/geekbrains/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/com/geekbrains/miniMarketApiTest/testGetProducts/expected.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini-market.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/mini-market.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/retrofit/api/MiniMarketApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/miniMarketApiTest/MiniMarketApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/miniMarketApiTest/MiniMarketApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +65,7 @@
       <recent name="com.geekbrains.lesson3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="JUnit.All in java-backend-test-nov-2021">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geekbrains.mybatis.Test" />
       <module name="java-backend-test-nov-2021" />
@@ -89,15 +79,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in java-backend-test-nov-2021" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-backend-test-nov-2021" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,29 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MiniMarketApiTest.testGetProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-backend-test-nov-2021" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.miniMarketApiTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.miniMarketApiTest" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.miniMarketApiTest.MiniMarketApiTest" />
-      <option name="METHOD_NAME" value="testGetProducts" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in java-backend-test-nov-2021" />
         <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.MiniMarketApiTest (1)" />
         <item itemvalue="JUnit.MiniMarketApiTest.testDeleteById" />
         <item itemvalue="JUnit.MiniMarketApiTest.testCreateNewProduct" />
-        <item itemvalue="JUnit.MiniMarketApiTest.testGetProducts" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +169,9 @@
       <workItem from="1635959734460" duration="5110000" />
       <workItem from="1636824216489" duration="4403000" />
       <workItem from="1637169133772" duration="5630000" />
-      <workItem from="1637429387990" duration="5317000" />
+      <workItem from="1637429387990" duration="5520000" />
+      <workItem from="1637773506300" duration="30000" />
+      <workItem from="1637773573937" duration="745000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 3. RestAssured tests for Imgur Api">
       <created>1635964598627</created>
@@ -212,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637174374979</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lesson 6. MyBatis">
+      <created>1637434764965</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637434764966</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Lesson 6. MyBatis">
+      <created>1637434791188</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637434791188</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +218,8 @@
     <MESSAGE value="Lesson 3. RestAssured tests for Imgur Api" />
     <MESSAGE value="Lesson 4. RestAssured tests for Imgur Api" />
     <MESSAGE value="Lesson 5. Retrofit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5. Retrofit" />
+    <MESSAGE value="Lesson 6. MyBatis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 6. MyBatis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
