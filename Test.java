@@ -18,7 +18,7 @@ public class Test {
 
 //1.Добавление категории
         Categories category = new Categories();
-        category.setId(5);
+        category.setId(3);
         category.setTitle("Car");
         categoriesMapper.insert(category);
 
