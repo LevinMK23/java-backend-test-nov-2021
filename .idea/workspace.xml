@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd29689e-617f-4a40-9880-3a9eb125fa42" name="Default Changelist" comment="" />
+    <list default="true" id="cd29689e-617f-4a40-9880-3a9eb125fa42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/homework3/ImgurApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/homework3/ImgurApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/homework4/ImgurApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/homework4/ImgurApiTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +31,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="20Pwrujw9RFLxTlG1rHDLHJXClA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -33,12 +48,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -48,7 +68,7 @@
       <recent name="com.geekbrains.lesson3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ImgurApiTest">
+  <component name="RunManager" selected="JUnit.ImgurApiTests">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -60,79 +80,80 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArithmeticUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ImgurApiTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-backend-test-nov-2021" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.lesson3.*" />
+          <option name="PATTERN" value="com.geekbrains.homework4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.lesson3" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.lesson3.ArithmeticUtilsTest" />
+      <option name="PACKAGE_NAME" value="com.geekbrains.homework4" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.homework4.ImgurApiTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArithmeticUtilsTest.sum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ImgurApiTests.testImageDeletionAuthed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-backend-test-nov-2021" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.lesson3.*" />
+          <option name="PATTERN" value="com.geekbrains.homework4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.lesson3" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.lesson3.ArithmeticUtilsTest" />
-      <option name="METHOD_NAME" value="sum(int,int,int)" />
+      <option name="PACKAGE_NAME" value="com.geekbrains.homework4" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.homework4.ImgurApiTests" />
+      <option name="METHOD_NAME" value="testImageDeletionAuthed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImgurApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ImgurApiTests.testImageDeletionUnAuthed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-backend-test-nov-2021" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.restApi.imgur.*" />
+          <option name="PATTERN" value="com.geekbrains.homework4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.restApi.imgur" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.restApi.imgur.ImgurApiTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImgurApiTest.testAccountBase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-backend-test-nov-2021" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.restApi.imgur.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.restApi.imgur" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.restApi.imgur.ImgurApiTest" />
-      <option name="METHOD_NAME" value="testAccountBase" />
+      <option name="PACKAGE_NAME" value="com.geekbrains.homework4" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.homework4.ImgurApiTests" />
+      <option name="METHOD_NAME" value="testImageDeletionUnAuthed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImgurApiTest.testUpdateImageInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ImgurApiTests.testImageVideoDeletionAuthed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-backend-test-nov-2021" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.restApi.imgur.*" />
+          <option name="PATTERN" value="com.geekbrains.homework4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.restApi.imgur" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.restApi.imgur.ImgurApiTest" />
-      <option name="METHOD_NAME" value="testUpdateImageInfo" />
+      <option name="PACKAGE_NAME" value="com.geekbrains.homework4" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.homework4.ImgurApiTests" />
+      <option name="METHOD_NAME" value="testImageVideoDeletionAuthed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImgurApiTests.testUnfavoriteAnImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-backend-test-nov-2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geekbrains.homework4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.geekbrains.homework4" />
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.homework4.ImgurApiTests" />
+      <option name="METHOD_NAME" value="testUnfavoriteAnImage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ImgurApiTest" />
-        <item itemvalue="JUnit.ImgurApiTest.testUpdateImageInfo" />
-        <item itemvalue="JUnit.ImgurApiTest.testAccountBase" />
-        <item itemvalue="JUnit.ArithmeticUtilsTest.sum" />
-        <item itemvalue="JUnit.ArithmeticUtilsTest" />
+        <item itemvalue="JUnit.ImgurApiTests" />
+        <item itemvalue="JUnit.ImgurApiTests.testImageVideoDeletionAuthed" />
+        <item itemvalue="JUnit.ImgurApiTests.testImageDeletionAuthed" />
+        <item itemvalue="JUnit.ImgurApiTests.testImageDeletionUnAuthed" />
+        <item itemvalue="JUnit.ImgurApiTests.testUnfavoriteAnImage" />
       </list>
     </recent_temporary>
   </component>
@@ -165,5 +186,28 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/geekbrains/homework4/ImgurApiTests.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

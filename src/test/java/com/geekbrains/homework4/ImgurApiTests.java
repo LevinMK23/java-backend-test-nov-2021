@@ -1,15 +1,34 @@
-package com.geekbrains.homework3;
+package com.geekbrains.homework4;
 
+import com.geekbrains.homework3.ImgurApiParameters;
 import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 import org.junit.jupiter.api.*;
-
-import java.sql.Statement;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.Is.is;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ImgurApiTests {
+
+    RequestSpecification authSpec = given()
+            .auth()
+            .oauth2(ImgurApiParameters.TOKEN)
+            .header("Authorization", ImgurApiParameters.CLIENT_ID);
+
+    ResponseSpecification responseSpecCodeSuccessData = new ResponseSpecBuilder()
+            .expectStatusCode(200)
+            .expectBody("success", is(true))
+            .expectBody("data", is(true))
+            .build();
+
+    ResponseSpecification responseSpecCodeSuccess = new ResponseSpecBuilder()
+            .expectStatusCode(200)
+            .expectBody("success", is(true))
+            .build();
 
     @BeforeAll
     static void beforeAll() {
@@ -26,12 +45,9 @@ public class ImgurApiTests {
         String url = "image/" + imageHash;
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .expect()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data.id", is(imageHash))
                 .when()
                 .get(url);
@@ -50,9 +66,7 @@ public class ImgurApiTests {
         String imgName = "FDskSI9aQAAKlnf.jpg";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .formParam("image", imgUrl)
                 .formParam("album", albumHash)
                 .formParam("type", "url")
@@ -61,8 +75,7 @@ public class ImgurApiTests {
                 .formParam("description", imgDescription)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data.name", is(imgName))
                 .body("data.title", is(imgTitle))
                 .body("data.description", is(imgDescription))
@@ -83,9 +96,7 @@ public class ImgurApiTests {
         String gifName = "because-were-smart-were-smart.gif";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .log().all()
+                .spec(authSpec)
                 .formParam("image", gifUrl)
                 .formParam("album", albumHash)
                 .formParam("type", "url")
@@ -94,8 +105,7 @@ public class ImgurApiTests {
                 .formParam("description", gifDescription)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data.name", is(gifName))
                 .body("data.title", is(gifTitle))
                 .body("data.description", is(gifDescription))
@@ -116,9 +126,7 @@ public class ImgurApiTests {
         String videoName = "1632425186_looped_1632425183.mp4";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .log().all()
+                .spec(authSpec)
                 .formParam("image", videoUrl)
                 .formParam("album", albumHash)
                 .formParam("type", "url")
@@ -127,8 +135,7 @@ public class ImgurApiTests {
                 .formParam("description", videoDescription)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data.name", is(videoName))
                 .body("data.title", is(videoTitle))
                 .body("data.description", is(videoDescription))
@@ -145,7 +152,7 @@ public class ImgurApiTests {
         String urlForDeleteHash = "album/" + albumHash + "/images";
         String imageDeleteHash = given().when()
                 .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .oauth2(com.geekbrains.homework3.ImgurApiParameters.TOKEN)
                 .when()
                 .get(urlForDeleteHash)
                 .then().statusCode(200)
@@ -155,16 +162,18 @@ public class ImgurApiTests {
         String imgTitle = "Cat";
         String imgDescription = "Cactus and cat";
 
+        RequestSpecification requestSpecTitleAndDesc = new RequestSpecBuilder()
+                .addFormParam("title", imgTitle)
+                .addFormParam("description", imgDescription)
+                .build();
+
         given().when()
                 .log().all()
                 .header("Authorization", ImgurApiParameters.CLIENT_ID)
-                .formParam("title", imgTitle)
-                .formParam("description", imgDescription)
+                .spec(requestSpecTitleAndDesc)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
-                .body("data", is(true))
+                .spec(responseSpecCodeSuccessData)
                 .when()
                 .post(url);
     }
@@ -178,7 +187,7 @@ public class ImgurApiTests {
         String urlForImageHash = "album/" + albumHash + "/images";
         String imageHash = given().when()
                 .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .oauth2(com.geekbrains.homework3.ImgurApiParameters.TOKEN)
                 .when()
                 .get(urlForImageHash)
                 .then().statusCode(200)
@@ -189,16 +198,12 @@ public class ImgurApiTests {
         String imgDescription = "Cat and cactus";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .formParam("title", imgTitle)
                 .formParam("description", imgDescription)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
-                .body("data", is(true))
+                .spec(responseSpecCodeSuccessData)
                 .when()
                 .post(url);
     }
@@ -212,7 +217,7 @@ public class ImgurApiTests {
         String urlForImageHash = "album/" + albumHash + "/images";
         String imageHash = given().when()
                 .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .oauth2(com.geekbrains.homework3.ImgurApiParameters.TOKEN)
                 .when()
                 .get(urlForImageHash)
                 .then().statusCode(200)
@@ -221,12 +226,10 @@ public class ImgurApiTests {
         String url = "image/" + imageHash + "/favorite";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .spec(authSpec)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data", is("favorited"))
                 .when()
                 .post(url);
@@ -250,12 +253,10 @@ public class ImgurApiTests {
         String url = "image/" + imageHash + "/favorite";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .spec(authSpec)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data", is("unfavorited"))
                 .when()
                 .post(url);
@@ -282,8 +283,7 @@ public class ImgurApiTests {
                 .header("Authorization", ImgurApiParameters.CLIENT_ID)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .when()
                 .delete(url);
     }
@@ -297,7 +297,7 @@ public class ImgurApiTests {
         String urlForImageHash = "album/" + albumHash + "/images";
         String imageHash = given().when()
                 .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .oauth2(com.geekbrains.homework3.ImgurApiParameters.TOKEN)
                 .when()
                 .get(urlForImageHash)
                 .then().statusCode(200)
@@ -306,13 +306,10 @@ public class ImgurApiTests {
         String url = "image/" + imageHash;
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .spec(authSpec)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
-                .body("data", is(true))
+                .spec(responseSpecCodeSuccessData)
                 .when()
                 .delete(url);
     }
@@ -326,7 +323,7 @@ public class ImgurApiTests {
         String urlForImageHash = "album/" + albumHash + "/images";
         String imageHash = given().when()
                 .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .oauth2(com.geekbrains.homework3.ImgurApiParameters.TOKEN)
                 .when()
                 .get(urlForImageHash)
                 .then().statusCode(200)
@@ -335,14 +332,10 @@ public class ImgurApiTests {
         String url = "image/" + imageHash;
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
-                .body("data", is(true))
+                .spec(responseSpecCodeSuccessData)
                 .when()
                 .delete(url);
     }
@@ -356,13 +349,12 @@ public class ImgurApiTests {
         String url = "album/" + albumHash;
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .spec(authSpec)
                 .expect()
                 .log().all()
                 .statusCode(is(200))
                 .body("success", is(true))
-                .body("data.account_url", is(ImgurApiParameters.USERNAME))
+                .body("data.account_url", is(com.geekbrains.homework3.ImgurApiParameters.USERNAME))
                 .when()
                 .get(url);
     }
@@ -376,13 +368,10 @@ public class ImgurApiTests {
         String url = "album/" + albumHash + "/images";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .when()
                 .get(url);
     }
@@ -397,13 +386,10 @@ public class ImgurApiTests {
         String url = "album/" + albumHash + "/image/" + imageHash;
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data.id", is(imageHash))
                 .when()
                 .get(url);
@@ -422,9 +408,7 @@ public class ImgurApiTests {
         String url = "album/" + albumHash;
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .log().all()
                 .formParam("title", albumTitle)
                 .formParam("description", albumDescription)
@@ -432,9 +416,7 @@ public class ImgurApiTests {
                 .formParam("layout", albumLayout)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("data", is(true))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccessData)
                 .when()
                 .put(url);
     }
@@ -448,13 +430,10 @@ public class ImgurApiTests {
         String url = "album/" + albumHash + "/favorite";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data", is("favorited"))
                 .when()
                 .post(url);
@@ -469,12 +448,10 @@ public class ImgurApiTests {
         String url = "album/" + albumHash + "/favorite";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .spec(authSpec)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .body("data", is("unfavorited"))
                 .when()
                 .post(url);
@@ -492,16 +469,13 @@ public class ImgurApiTests {
         String url = "album/" + albumDeleteHash + "/add";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
-                .header("Authorization", ImgurApiParameters.CLIENT_ID)
+                .spec(authSpec)
                 .log().all()
                 .formParam("deletehashes[]", imageDeleteHash)
                 .formParam("deletehashes[]", imageDeleteHash2)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .when()
                 .post(url);
     }
@@ -517,15 +491,13 @@ public class ImgurApiTests {
         String url = "album/" + albumHash + "/add";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .spec(authSpec)
                 .log().all()
                 .formParam("ids[]", imageHash)
                 .formParam("ids[]", imageHash2)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .when()
                 .post(url);
     }
@@ -541,15 +513,13 @@ public class ImgurApiTests {
         String url = "album/" + albumHash + "/remove_images";
 
         given().when()
-                .auth()
-                .oauth2(ImgurApiParameters.TOKEN)
+                .spec(authSpec)
                 .log().all()
                 .formParam("ids[]", imageHash)
                 .formParam("ids[]", imageHash2)
                 .expect()
                 .log().all()
-                .statusCode(is(200))
-                .body("success", is(true))
+                .spec(responseSpecCodeSuccess)
                 .when()
                 .post(url);
     }
